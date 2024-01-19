@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Ending(str, a) {
+        var String = str.slice(-a.length);
+
+        return String === a;
+      }
+
+      console.log(Ending("Hello world", "world")); // true
+      console.log(Ending("Hello world", "orld")); // true
+      console.log(Ending("Hello world", "world2")); // false
+    </script>
+  </body>
+</html>

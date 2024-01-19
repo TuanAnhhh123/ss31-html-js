@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function largestOfArrs(...mang) {
+        if (mang.length === 0) {
+          return [];
+        }
+
+        let result = [];
+
+        for (let arr of mang) {
+          if (arr.length > 0) {
+            result.push(Math.max(...arr));
+          } else {
+            result.push(undefined);
+          }
+        }
+
+        return result;
+      }
+
+      console.log(largestOfArrs([1, 2, 3, 4], [-1, -2, -3], [5, 1, 2, 9]));
+      console.log(largestOfArrs([1, 2, 3, 4], [5, 1, 2, 9]));
+      console.log(largestOfArrs());
+    </script>
+  </body>
+</html>
